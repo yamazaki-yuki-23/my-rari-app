@@ -1,12 +1,9 @@
 {
   "name": "my-rari-app",
-  "type": "module",
   "version": "0.1.0",
   "private": true,
   "description": "A Runtime Accelerated Rendering Infrastructure (rari) application",
-  "engines": {
-    "node": ">=22.0.0"
-  },
+  "type": "module",
   "scripts": {
     "build": "rari build",
     "dev": "rari dev",
@@ -14,7 +11,11 @@
     "deploy:railway": "rari deploy railway",
     "deploy:render": "rari deploy render",
     "clean": "rm -rf dist",
-    "typecheck": "tsgo"
+    "typecheck": "tsgo",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "format": "oxfmt .",
+    "format:check": "oxfmt . --check"
   },
   "dependencies": {
     "rari": "latest",
@@ -27,7 +28,12 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@typescript/native-preview": "^7.0.0-dev.20260221.1",
+    "oxfmt": "^0.35.0",
+    "oxlint": "latest",
     "rolldown-vite": "^7.3.1",
     "tailwindcss": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
