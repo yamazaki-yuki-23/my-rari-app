@@ -23,6 +23,7 @@ This rari application is pre-configured for cloud deployment.
 ### Quick Deploy
 
 1. **Push to GitHub**:
+
    ```bash
    git add .
    git commit -m "Initial commit"
@@ -52,6 +53,7 @@ pnpm run deploy:railway
 ### 🎨 Render
 
 1. **Push to GitHub**:
+
    ```bash
    git add .
    git commit -m "Initial commit"
@@ -97,10 +99,12 @@ pnpm run typecheck    # Run TypeScript checks
 ## 🌍 Environment Variables
 
 Cloud platforms automatically provide:
+
 - `PORT` - Server port (platform assigns this)
 - `NODE_ENV=production` - Production mode
 
 Optional variables you can set:
+
 - `RUST_LOG=debug` - Rust logging level
 
 ## 🏗️ Architecture

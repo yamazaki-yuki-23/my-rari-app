@@ -4,7 +4,7 @@ import Welcome from '@/components/Welcome'
 
 export default function HomePage(_params: PageProps) {
   return (
-    <div className="space-y-8">
+    <div className='space-y-8'>
       <Welcome />
       <ServerTime />
     </div>
