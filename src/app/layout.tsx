@@ -1,4 +1,4 @@
-import type { LayoutProps } from 'rari'
+import type { LayoutProps, Metadata } from 'rari'
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps) {
   )
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'My rari App',
   description: 'Built with rari',
 }

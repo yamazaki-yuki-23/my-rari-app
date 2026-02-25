@@ -1,4 +1,4 @@
-import type { PageProps } from 'rari'
+import type { PageProps, Metadata } from 'rari'
 import Counter from '@/components/Counter'
 
 // This is a React Server Component - runs on the server!
@@ -15,9 +15,15 @@ export default async function HomePage(_: PageProps) {
       <div className='rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6'>
         <h2 className='text-lg font-semibold text-slate-900'>React Repository Stats</h2>
         <div className='mt-3 grid gap-2 text-sm text-slate-700 sm:grid-cols-2'>
-          <p className='rounded-md bg-slate-50 px-3 py-2'>Stars: {repoData.stargazers_count.toLocaleString()}</p>
-          <p className='rounded-md bg-slate-50 px-3 py-2'>Forks: {repoData.forks_count.toLocaleString()}</p>
-          <p className='rounded-md bg-slate-50 px-3 py-2'>Watchers: {repoData.watchers_count.toLocaleString()}</p>
+          <p className='rounded-md bg-slate-50 px-3 py-2'>
+            Stars: {repoData.stargazers_count.toLocaleString()}
+          </p>
+          <p className='rounded-md bg-slate-50 px-3 py-2'>
+            Forks: {repoData.forks_count.toLocaleString()}
+          </p>
+          <p className='rounded-md bg-slate-50 px-3 py-2'>
+            Watchers: {repoData.watchers_count.toLocaleString()}
+          </p>
           <p className='rounded-md bg-slate-50 px-3 py-2'>
             Last updated: {new Date(repoData.updated_at).toLocaleDateString()}
           </p>
@@ -30,7 +36,7 @@ export default async function HomePage(_: PageProps) {
   )
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Home | My rari App',
   description: 'Welcome to my rari application',
 }
